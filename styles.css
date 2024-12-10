@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#titre {
+    padding-bottom: 5%;
+}
+/* Section Styling */
+.section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+
+}
+
+@font-face {
+    font-family: "attack";
+    src: url('attack.otf');
+}
+
+#section2 p {
+    font-size: 90px;
+    color: red
+}
+
+#section1 {
+    background-image: url('images/image1.webp');
+}
+
+#section2 {
+    letter-spacing: 10px;
+    font-family: "attack";
+    background-image: url('images/image2.jpg');
+}
+
+#section3 {
+    background-image: url('images/image3.jpg');
+}
+
+#section4 {
+    background-color: #333; /* Solid background for the last section */
+    color: #fff;
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
