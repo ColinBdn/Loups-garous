@@ -24,7 +24,7 @@ body {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-color: black;
+    background-color: rgb(12, 11, 26);
 
 }
 
@@ -33,14 +33,15 @@ body {
     src: url('./ressources/fonts/attack.otf');
 }
 
-#section2 p {
+#section2 a {
     font-size: 90px;
-    color: red
+    color: red;
+    text-decoration: none;
 }
 
-/* #section1 {
+#section1 {
     background-image: url('./ressources/images/titleBackground.webp');
-} */
+}
 
 #section2 {
     letter-spacing: 10px;
@@ -53,15 +54,15 @@ body {
 }
 
 #section4 {
-    background-color: #333; /* Solid background for the last section */
+    background-color: #333;
     color: #fff;
 }
 
-/* Content Styling */
+
 .content {
     text-align: center;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     padding: 20px;
     border-radius: 10px;
 }
@@ -77,3 +78,35 @@ body {
 
 
 
+.button {
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+  }
+  
+.button:before,
+.button:after {
+  border: 0 solid transparent;
+  transition: all 0.25s;
+  content: '';
+  position: absolute;
+  width: 24px;
+}
+
+.button:before {
+  border-top: 2px solid #ff0000;
+  left: 0px;
+  top: -5px;
+}
+.button:after {
+  border-bottom: 2px solid #ff0000;
+  bottom: -5px;
+  right: 0px;
+}
+ 
+.button:hover:before,
+.button:hover:after {
+  width: 100%;
+}
