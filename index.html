@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Sliding Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flippingCards.css">
 </head>
 <body>
     <div class="section" id="section1">
         <div class="content">
-            <img id="titre" src="./images/title_v2.png", width="85%">
-            <img id="loup" src="./images/loup-garou.png", width="20%">
+            <img id="titre" src="./ressources/images/title_v2.png", width="85%">
+            <img id="loup" src="./ressources/images/loup-garou.png", width="20%">
         </div>
     </div>
 
@@ -21,9 +22,130 @@
     </div>
 
     <div class="section" id="section3">
-        <div class="content">
-            <h1>Our Services</h1>
-            <p>Here are the services we offer.</p>
+        <div class="wrapper">
+            <h1>Cards:</h1>
+            <div class="cols">
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                                <div class="inner">
+                                    <p>Diligord</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+                                <div class="inner">
+                                    <p>Rocogged</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+                                <div class="inner">
+                                    <p>Strizzes</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+                                <div class="inner">
+                                    <p>Clossyo</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/504/504/">
+                                <div class="inner">
+                                    <p>Rendann</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/505/505/)">
+                                <div class="inner">
+                                    <p>Reflupper</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/506/506/)">
+                                <div class="inner">
+                                    <p>Acirassi</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container">
+                            <div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+                                <div class="inner">
+                                    <p>Sohanidd</p>
+                        <span>Lorem ipsum</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -34,6 +156,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="parallaxScroll.js"></script>
+    <script src="flippingCards.js"></script>
+    <script src="bloody.js"></script>
 </body>
 </html>

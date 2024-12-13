@@ -30,7 +30,7 @@ body {
 
 @font-face {
     font-family: "attack";
-    src: url('attack.otf');
+    src: url('./ressources/fonts/attack.otf');
 }
 
 #section2 p {
@@ -38,18 +38,18 @@ body {
     color: red
 }
 
-#section1 {
-    background-image: url('images/image1.webp');
-}
+/* #section1 {
+    background-image: url('./ressources/images/titleBackground.webp');
+} */
 
 #section2 {
     letter-spacing: 10px;
     font-family: "attack";
-    background-image: url('images/image2.jpg');
+    background-image: url('./ressources/images/image2.jpg');
 }
 
 #section3 {
-    background-image: url('images/image3.jpg');
+    background-image: url('./ressources/images/image3.jpg');
 }
 
 #section4 {
@@ -74,3 +74,6 @@ body {
 .content p {
     font-size: 1.5rem;
 }
+
+
+
