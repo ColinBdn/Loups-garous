@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+ html, body {
+	 padding: 0;
+	 margin: 0;
+	 font-family: 'Montserrat', sans-serif;
+}
+
+#jsp {
+	margin-top: -50px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://wallpaperaccess.com/full/756054.jpg);
+	min-height: 600px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+@font-face {
+    font-family: "attack";
+    src: url('./ressources/fonts/attack.otf');
+}
+
+#jsp a {
+    font-size: 90px;
+    color: red;
+    text-decoration: none;
+}
+
+#jsp {
+    letter-spacing: 10px;
+    font-family: "attack";
+	text-align: center;
+	padding: 20%;
+}
+
+.button {
+    background-color: #00000000;
+    border: none;
+    outline: none;
+    padding: 12px 40px 10px;
+    position: relative;
+  }
+  
+.button:before,
+.button:after {
+  border: 0 solid transparent;
+  transition: all 0.25s;
+  content: '';
+  position: absolute;
+  width: 24px;
+}
+
+.button:before {
+  border-top: 2px solid #ff0000;
+  left: 0px;
+  top: -5px;
+}
+.button:after {
+  border-bottom: 2px solid #ff0000;
+  bottom: -5px;
+  right: 0px;
+}
+ 
+.button:hover:before,
+.button:hover:after {
+  width: 100%;
+}
+
+ #app {
+	 background: #0a0a0a;
+	 height: 100vh;
+	 width: 100%;
+	 margin: 0;
+	 padding: 0;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 background: linear-gradient(rgba(10, 10, 10, .6), rgba(0, 0, 0, .9)), repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px), url('./ressources/images/titleBackground2.webp');
+	 background-size: cover;
+	 background-position: center;
+	 z-index: 1;
+}
+ #wrapper {
+	 text-align: center;
+}
+ .sub {
+	 color: red;
+	 letter-spacing: 1em;
+	 font-size: 30px;
+}
+/* Our mixin positions a copy of our text directly on our existing text, while also setting content to the appropriate text set in the data-text attribute. */
+ .glitch {
+	 position: relative;
+	 color: white;
+	 font-size: 6em;
+	 letter-spacing: 0.5em;
+	 margin-top: 0%;
+	/* Animation provies a slight random skew. Check bottom of doc for more information on how to random skew. */
+	 animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+ .glitch::before {
+	 content: attr(data-text);
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 left: 2px;
+	 text-shadow: -2px 0 #ff00c1;
+	/* Creates an initial clip for our glitch. This works in a typical top,right,bottom,left fashion and creates a mask to only show a certain part of the glitch at a time. */
+	 clip: rect(44px, 450px, 56px, 0);
+	/* Runs our glitch-anim defined below to run in a 5s loop, infinitely, with an alternating animation to keep things fresh. */
+	 animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+ .glitch::after {
+	 content: attr(data-text);
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 left: -2px;
+	 text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+	 animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+/* Creates an animation with 20 steaps. For each step, it calculates a percentage for the specific step. It then generates a random clip box to be used for the random glitch effect. Also adds a very subtle skew to change the 'thickness' of the glitch.*/
+ @keyframes glitch-anim {
+	 0% {
+		 clip: rect(97px, 9999px, 4px, 0);
+		 transform: skew(0.45deg);
+	}
+	 5% {
+		 clip: rect(13px, 9999px, 27px, 0);
+		 transform: skew(0.76deg);
+	}
+	 10% {
+		 clip: rect(65px, 9999px, 57px, 0);
+		 transform: skew(0.28deg);
+	}
+	 15% {
+		 clip: rect(45px, 9999px, 12px, 0);
+		 transform: skew(0.12deg);
+	}
+	 20% {
+		 clip: rect(93px, 9999px, 3px, 0);
+		 transform: skew(0.98deg);
+	}
+	 25% {
+		 clip: rect(51px, 9999px, 83px, 0);
+		 transform: skew(0.16deg);
+	}
+	 30% {
+		 clip: rect(41px, 9999px, 88px, 0);
+		 transform: skew(0.16deg);
+	}
+	 35% {
+		 clip: rect(67px, 9999px, 80px, 0);
+		 transform: skew(0.11deg);
+	}
+	 40% {
+		 clip: rect(85px, 9999px, 65px, 0);
+		 transform: skew(0.32deg);
+	}
+	 45% {
+		 clip: rect(7px, 9999px, 5px, 0);
+		 transform: skew(0.82deg);
+	}
+	 50% {
+		 clip: rect(67px, 9999px, 2px, 0);
+		 transform: skew(0.89deg);
+	}
+	 55% {
+		 clip: rect(74px, 9999px, 81px, 0);
+		 transform: skew(0.9deg);
+	}
+	 60% {
+		 clip: rect(34px, 9999px, 89px, 0);
+		 transform: skew(0.59deg);
+	}
+	 65% {
+		 clip: rect(35px, 9999px, 61px, 0);
+		 transform: skew(0.9deg);
+	}
+	 70% {
+		 clip: rect(80px, 9999px, 13px, 0);
+		 transform: skew(0.16deg);
+	}
+	 75% {
+		 clip: rect(67px, 9999px, 10px, 0);
+		 transform: skew(0.97deg);
+	}
+	 80% {
+		 clip: rect(16px, 9999px, 94px, 0);
+		 transform: skew(0.01deg);
+	}
+	 85% {
+		 clip: rect(39px, 9999px, 90px, 0);
+		 transform: skew(0.29deg);
+	}
+	 90% {
+		 clip: rect(70px, 9999px, 45px, 0);
+		 transform: skew(0.07deg);
+	}
+	 95% {
+		 clip: rect(7px, 9999px, 10px, 0);
+		 transform: skew(0.99deg);
+	}
+	 100% {
+		 clip: rect(83px, 9999px, 31px, 0);
+		 transform: skew(0.81deg);
+	}
+}
+ @keyframes glitch-anim2 {
+	 0% {
+		 clip: rect(13px, 9999px, 8px, 0);
+		 transform: skew(0.85deg);
+	}
+	 5% {
+		 clip: rect(33px, 9999px, 14px, 0);
+		 transform: skew(0.61deg);
+	}
+	 10% {
+		 clip: rect(78px, 9999px, 33px, 0);
+		 transform: skew(0.02deg);
+	}
+	 15% {
+		 clip: rect(52px, 9999px, 61px, 0);
+		 transform: skew(0.23deg);
+	}
+	 20% {
+		 clip: rect(64px, 9999px, 56px, 0);
+		 transform: skew(0.01deg);
+	}
+	 25% {
+		 clip: rect(1px, 9999px, 6px, 0);
+		 transform: skew(0.73deg);
+	}
+	 30% {
+		 clip: rect(67px, 9999px, 41px, 0);
+		 transform: skew(0.84deg);
+	}
+	 35% {
+		 clip: rect(77px, 9999px, 34px, 0);
+		 transform: skew(0.23deg);
+	}
+	 40% {
+		 clip: rect(28px, 9999px, 30px, 0);
+		 transform: skew(0.02deg);
+	}
+	 45% {
+		 clip: rect(50px, 9999px, 51px, 0);
+		 transform: skew(0.66deg);
+	}
+	 50% {
+		 clip: rect(5px, 9999px, 67px, 0);
+		 transform: skew(0.86deg);
+	}
+	 55% {
+		 clip: rect(66px, 9999px, 7px, 0);
+		 transform: skew(0.29deg);
+	}
+	 60% {
+		 clip: rect(67px, 9999px, 93px, 0);
+		 transform: skew(0.85deg);
+	}
+	 65% {
+		 clip: rect(20px, 9999px, 23px, 0);
+		 transform: skew(0.94deg);
+	}
+	 70% {
+		 clip: rect(44px, 9999px, 21px, 0);
+		 transform: skew(0.74deg);
+	}
+	 75% {
+		 clip: rect(53px, 9999px, 17px, 0);
+		 transform: skew(0.27deg);
+	}
+	 80% {
+		 clip: rect(27px, 9999px, 64px, 0);
+		 transform: skew(0.3deg);
+	}
+	 85% {
+		 clip: rect(84px, 9999px, 4px, 0);
+		 transform: skew(0.94deg);
+	}
+	 90% {
+		 clip: rect(82px, 9999px, 94px, 0);
+		 transform: skew(0.61deg);
+	}
+	 95% {
+		 clip: rect(89px, 9999px, 55px, 0);
+		 transform: skew(0.2deg);
+	}
+	 100% {
+		 clip: rect(25px, 9999px, 69px, 0);
+		 transform: skew(0.85deg);
+	}
+}
+ @keyframes glitch-skew {
+	 0% {
+		 transform: skew(2deg);
+	}
+	 10% {
+		 transform: skew(4deg);
+	}
+	 20% {
+		 transform: skew(-3deg);
+	}
+	 30% {
+		 transform: skew(2deg);
+	}
+	 40% {
+		 transform: skew(-4deg);
+	}
+	 50% {
+		 transform: skew(-1deg);
+	}
+	 60% {
+		 transform: skew(-1deg);
+	}
+	 70% {
+		 transform: skew(-4deg);
+	}
+	 80% {
+		 transform: skew(-2deg);
+	}
+	 90% {
+		 transform: skew(-3deg);
+	}
+	 100% {
+		 transform: skew(0deg);
+	}
+}
+ 
+
+
+
+
+.arrow-container {
+	margin-top: 3%;
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateZ(0deg);
+}
+.arrow-container:hover {
+	cursor: pointer;
+}
+.arrow-container:hover .arrow {
+	top: 50%;
+}
+.arrow-container:hover .arrow:before {
+	transform: translate(-50%, -50%) rotateZ(-30deg);
+}
+.arrow-container:hover .arrow:after {
+	transform: translate(-50%, -50%) rotateZ(30deg);
+}
+.arrow {
+	position: absolute;
+	left: 50%;
+	transition: all 0.4s ease;
+}
+.arrow:before, .arrow:after {
+	transition: all 0.4s ease;
+	content: '';
+	display: block;
+	position: absolute;
+	transform-origin: bottom right;
+	background: #fff;
+	width: 4px;
+	height: 50px;
+	border-radius: 10px;
+	transform: translate(-50%, -50%) rotateZ(-45deg);
+	background: red;
+}
+.arrow:after {
+	transform-origin: bottom left;
+	transform: translate(-50%, -50%) rotateZ(45deg);
+}
+.arrow:nth-child(1) {
+	opacity: 0.3;
+	top: 35%;
+}
+.arrow:nth-child(2) {
+	opacity: 0.6;
+	top: 55%;
+}
+.arrow:nth-child(3) {
+	opacity: 0.9;
+	top: 75%;
+}

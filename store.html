@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="store.css">
+
+</head>
+<body>
+    <header>
+        <a href="index.html">return to home page</a>
+        <h1>Store</h1>
+        <a href="aboutUs.html">about us</a>
+    </header>
+    <div class="container">
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <li>No items in cart</li>
+            </ul>
+        </div>
+
+        <div class="games">
+            <!-- Example games -->
+            <div class="game" data-name="LoupGarous" data-price="40">
+                <img src="ressources/images/loupGarouShop.jpg" >
+                <div class="game-details">
+                    <h3>Loup Garous</h3>
+                    <p>Price: 10€</p>
+                    <button onclick="addToCart(event)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="game" data-name="Monopoly" data-price="35">
+                <img src="ressources/images/monopolyBoite.jpeg">
+                <div class="game-details">
+                    <h3>Monopoly</h3>
+                    <p>Price: 25€</p>
+                    <button onclick="addToCart(event)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="game" data-name="1000bornes" data-price="50">
+                <img src="ressources/images/1000bornesShop.jpg" >
+                <div class="game-details">
+                    <h3>1000 bornes</h3>
+                    <p>Price: 15€</p>
+                    <button onclick="addToCart(event)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="game" data-name="Cluedo" data-price="30">
+                <img src="ressources/images/cluedoShop.jpg" >
+                <div class="game-details">
+                    <h3>Cluedo</h3>
+                    <p>Price: 40€</p>
+                    <button onclick="addToCart(event)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cartItems = [];
+
+        function addToCart(event) {
+            const game = event.target.closest('.game');
+            const name = game.getAttribute('data-name');
+            const price = game.getAttribute('data-price');
+
+            cartItems.push({ name, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-items');
+            cartList.innerHTML = '';
+
+            cartItems.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price}`;
+                
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.style.marginLeft = '10px';
+                removeButton.onclick = () => {
+                    cartItems.splice(index, 1);
+                    updateCart();
+                };
+
+                listItem.appendChild(removeButton);
+                cartList.appendChild(listItem);
+            });
+
+            if (cartItems.length === 0) {
+                cartList.innerHTML = '<li>No items in cart</li>';
+            }
+        }
+    </script>
+</body>
+</html>
