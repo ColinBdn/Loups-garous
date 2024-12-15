@@ -5,14 +5,19 @@
 	 font-family: 'Montserrat', sans-serif;
 }
 
-#jsp {
+#howToPlay, #buy {
 	margin-top: -50px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://wallpaperaccess.com/full/756054.jpg);
-	min-height: 600px;
+	/* min-height: 600px; */
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	letter-spacing: 10px;
+    font-family: "attack";
+	text-align: center;
+	padding: 20%;
 }
 
 
@@ -21,18 +26,15 @@
     src: url('./ressources/fonts/attack.otf');
 }
 
-#jsp a {
+#howToPlay a, #buy a {
     font-size: 90px;
     color: red;
     text-decoration: none;
 }
 
-#jsp {
-    letter-spacing: 10px;
-    font-family: "attack";
-	text-align: center;
-	padding: 20%;
-}
+
+
+
 
 .button {
     background-color: #00000000;

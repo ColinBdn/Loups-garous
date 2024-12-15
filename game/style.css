@@ -1,0 +1,80 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+    background: url('./images/mainBackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive; /* Import Creepster font for horror theme */
+    color: #ff0000; /* Blood red color for text */
+}
+
+/* Centering the form */
+#connectForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    padding: 20px;
+    border: 2px solid #800000; /* Dark red border */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Styling the input */
+#playerName {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    background-color: #200000;
+    color: #ff0000;
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Styling the button */
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #ff0000;
+    background-color: #200000;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    font-family: 'Creepster', cursive;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Text styling */
+p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffcccc; /* Lighter red for better readability */
+}
+
+span {
+    font-weight: bold;
+}
+
+canvas
+{
+display: block; /* Removes scrollbars caused by inline elements */
+border:0px solid #0033ff;
+margin: 0px;
+padding: 0px;
+}
+
+

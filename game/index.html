@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="socket.io.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <section id="connectForm">
+        <div>
+        <input type="text" id="playerName" placeholder="entrez votre nom/pseudo" autocomplete="off">
+        <button type="button" onclick="connect()">submit</button>
+        </div>
+        <p>number of connected player: <span id="nbPlayer">0</span>/3</p>
+    </section>
+    <canvas id="gameCanva">
+    </canvas>
+</body>
+</html>
