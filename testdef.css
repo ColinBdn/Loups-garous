@@ -1,0 +1,6 @@
+.large-red {
+    font-size: 24px; /* Makes the text larger */
+    color: red; /* Changes the text color to red */
+    font-weight: bold; /* Ensures the text stays bold */
+    text-decoration: none; /* Removes underline, optional */
+}
