@@ -2,7 +2,6 @@ html, body
 {
     margin: 0;
     padding: 0;
-    height: 100%;
     overflow: hidden;
 
     background: url('./images/mainBackground.jpg') no-repeat center center fixed;
@@ -69,12 +68,14 @@ span {
     font-weight: bold;
 }
 
-canvas
+#gameSection
 {
 display: block; /* Removes scrollbars caused by inline elements */
 border:0px solid #0033ff;
 margin: 0px;
 padding: 0px;
+height: 100vh;
+width: 100vw;
 }
 
 
@@ -85,7 +86,17 @@ padding: 0px;
     transform: translate(-50%, -50%);
     text-align: center;
     background: rgba(0, 0, 0, 0.159); /* Dark semi-transparent background */
-    padding: 20px;
+    padding: 10px;
+    margin: 0;
     border: 2px solid #800000; /* Dark red border */
     border-radius: 10px;
+}
+
+
+.player
+{
+    width: 5vh;
+    height: 8vh;
+    background-color: red;
+    position: absolute;
 }

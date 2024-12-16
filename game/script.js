@@ -69,21 +69,33 @@ function start()
 
 function draw()
 {
-    canvas = document.getElementById("gameCanva");
-    ctx = canvas.getContext("2d");
+    // canvas = document.getElementById("gameCanva");
+    // ctx = canvas.getContext("2d");
 
-    resize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    resize()
-    window.addEventListener('resize', resize)
+    // resize = () => {
+    //     canvas.width = window.innerWidth;
+    //     canvas.height = window.innerHeight;
+    // }
+    // resize()
+    // window.addEventListener('resize', resize)
 
-    ctx.fillStyle = "rgb(200 0 0)";
-    ctx.fillRect(10, 10, 50, 50);
+    // ctx.fillStyle = "rgb(200 0 0)";
+    // ctx.fillRect(10, 10, 50, 50);
 }
 
+function drawPlayers()
+{
+    let players = document.getElementsByClassName("player");
+    // let nbPlayers = players.length;
+    // console.log(players);
 
+    for (let i = 0; i < players.length; i++)
+    {
+        console.log("a")
+        players[i].style.top = Math.round(Math.sin(i/players.length * 2*Math.PI) * 50 + 50).toString()+"vh"
+        players[i].style.left = Math.round(Math.cos(i/players.length * 2*Math.PI) * 50 + 50).toString()+"vh"
+    }    
+}
 
 
 
@@ -93,3 +105,5 @@ function draw()
 socket = io();
 waitForPlayer();
 handleReset();
+
+drawPlayers()

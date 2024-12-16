@@ -112,6 +112,7 @@ class Game:
         self.sendMessage("le village s'endort.")
         time.sleep(10)
         self.sendMessage("cupidon se reveille")
+        self.sendRole("cupidon")
         time.sleep(2)
         self.sendMessage("cupidon clique sur les 2 personnes qui vont tomber amoureux")
 
@@ -121,6 +122,9 @@ class Game:
     
     def sendMessage(self, data: str):
         sio.emit("gameMessage", data)
+        
+    def sendRole(self, data: str):
+        sio.emit("role", data)
 
     def runRound(self):
         pass
