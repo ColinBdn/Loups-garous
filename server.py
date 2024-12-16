@@ -2,6 +2,7 @@ from flask import Flask, send_from_directory
 import socketio
 import logging
 import random
+import time
 
 
 log = logging.getLogger('werkzeug')
@@ -99,12 +100,28 @@ class Game:
         self.ended = False
         
         self.runPrepRound()
-        while not self.ended:
-            self.runRound()
+        time.sleep(20)
+        # i=0
+        # while not self.ended:
+        #     self.runRound()
+        #     sio.emit("gameMessage", "le village s'endort..."+str(i))
+        #     i+=1
+        #     time.sleep(0.1)
         
     def runPrepRound(self):
+        self.sendMessage("le village s'endort.")
+        time.sleep(10)
+        self.sendMessage("cupidon se reveille")
+        time.sleep(2)
+        self.sendMessage("cupidon clique sur les 2 personnes qui vont tomber amoureux")
+
+        time.sleep(3)
+        
         pass
     
+    def sendMessage(self, data: str):
+        sio.emit("gameMessage", data)
+
     def runRound(self):
         pass
         
@@ -113,6 +130,9 @@ class Game:
 game = Game()
 
 
+@sio.event
+def test(sid, data): 
+    print("test response")
 
 
 @sio.event
@@ -122,7 +142,6 @@ def addPlayer(sid, data):
     
     game.players.append(Player(sid, data))
     print(f"new player added, username: {data}, sid: {sid}")
-
     if game.nbPlayer>=3:
         game.start()
 

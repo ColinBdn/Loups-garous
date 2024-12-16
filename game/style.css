@@ -78,3 +78,14 @@ padding: 0px;
 }
 
 
+#gameMessages {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.159); /* Dark semi-transparent background */
+    padding: 20px;
+    border: 2px solid #800000; /* Dark red border */
+    border-radius: 10px;
+}

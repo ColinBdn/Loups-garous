@@ -47,7 +47,7 @@ function handleReset()
     });
 
     socket.io.on("error", function() {
-        alert("connection error");
+        // alert("connection error");
         reset();
     });
 }
@@ -61,7 +61,9 @@ function reset()
 
 function start()
 {
-    
+    socket.on('gameMessage', function(data) {
+        document.getElementById("gameMessages").textContent = data;
+    });
 }
 
 
