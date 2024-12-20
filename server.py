@@ -87,7 +87,7 @@ app.wsgi_app = socketio.WSGIApp(sio, app.wsgi_app)
 
 @app.route('/')
 def index():
-    return send_from_directory('.', 'test2.html')
+    return send_from_directory('.', 'index.html')
 
 @app.route('/<path:path>')
 def serve_static(path):
@@ -633,7 +633,7 @@ class Game:
         self.toggleChat(True)
         self.showPlayers()
         self.sendMessage("Le village se réveille")
-        time.sleep(2)
+        time.sleep(3)
         self.sendMessage(phrase)
         self.sendDead()
 
@@ -673,7 +673,10 @@ class Game:
         elif (loupsDead==False and villageoisDead==True):
             self.sendMessage("Tous les villageois sont mort, les loups on gagné !!!")
             finish=True
-
+        elif (loupsDead==True and villageoisDead==True):
+            self.sendMessage("Tous le monde est mort !")
+            finish=True
+            
         vivants = []
         for player in self.players:
             if player.alive == True:

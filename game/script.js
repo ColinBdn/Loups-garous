@@ -864,8 +864,6 @@ handleReset();
 
 
 
-
-
 function serverDebug()
 {
     socket.emit("debug", "")

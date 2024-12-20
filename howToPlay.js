@@ -8,20 +8,20 @@ const images = [
     "https://i.pinimg.com/736x/ba/0b/6e/ba0b6e51f7757c09ccd0905e511ebc1c.jpg"
   ];
  
-  const slideshowImage = document.getElementById('slideshow-image');
-  
- 
-  let currentIndex = 0;
-  
- 
-  function showNextImage() {
-    currentIndex = (currentIndex + 1) % images.length; 
-    slideshowImage.style.opacity = 0; 
-    setTimeout(() => {
-      slideshowImage.src = images[currentIndex]; 
-      slideshowImage.style.opacity = 1; 
-    }, 500); 
-  }
-  
- 
-  slideshowImage.addEventListener('click', showNextImage);
+const slideshowImage = document.getElementById('slideshow-image');
+
+
+let currentIndex = 0;
+
+
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % images.length; 
+  slideshowImage.style.opacity = 0; 
+  setTimeout(() => {
+    slideshowImage.src = images[currentIndex]; 
+    slideshowImage.style.opacity = 1; 
+  }, 500); 
+}
+
+
+slideshowImage.addEventListener('click', showNextImage);

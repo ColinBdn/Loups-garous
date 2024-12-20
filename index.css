@@ -5,7 +5,7 @@
 	 font-family: 'Montserrat', sans-serif;
 }
 
-#howToPlay, #buy, #play {
+#howToPlay, #buy, #play, #cartes {
 	margin-top: -50px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://wallpaperaccess.com/full/756054.jpg);
 	/* min-height: 600px; */
@@ -26,7 +26,7 @@
     src: url('./ressources/fonts/attack.otf');
 }
 
-#howToPlay a, #buy a, #play a {
+#howToPlay a, #buy a, #play a, #cartes a {
     font-size: 90px;
     color: red;
     text-decoration: none;
@@ -127,7 +127,6 @@
 	 text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
 	 animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
-/* Creates an animation with 20 steaps. For each step, it calculates a percentage for the specific step. It then generates a random clip box to be used for the random glitch effect. Also adds a very subtle skew to change the 'thickness' of the glitch.*/
  @keyframes glitch-anim {
 	 0% {
 		 clip: rect(97px, 9999px, 4px, 0);
