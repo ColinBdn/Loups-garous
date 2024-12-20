@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Sliding Website</title>
+    <title>Loup Garous</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="section" id="section1">
-        <div class="content">
-            <img id="titre" src="./ressources/images/title.png", width="85%">
-            <img id="loup" src="./ressources/images/loup-garou.png", width="20%">
+    <section id="app">
+        <div id="wrapper">
+            <h1 class="glitch" data-text="LOUPS-GAROUS">LOUPS-GAROUS</h1>
+            <span class="sub">the game</span>
         </div>
-    </div>
+        <a href="#howToPlay" class="arrow-container">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </a>
+    </section>
+    
 
-    <div class="section" id="section2">
-        <div class="content">
-            <a class="button" href="howToPlay.html">Comment jouer ?</a>
-        </div>
-    </div>
+    <section id="howToPlay">
+        <a class="button" href="howToPlay.html">Comment jouer ?</a>
+    </section>
 
-    <div class="section" id="section4">
-        <div class="content">
-            <h1>Acheter le jeux:</h1>
-            <a id="storeButton" href="store.html">Visitez la boutique</a>
-        </div>
-    </div>
+    <section id="buy">
+        <a class="button" href="store.html">Acheter le jeux</a>
+    </section>
 
-    <script src="parallaxScroll.js"></script>
+    <section id="play">
+        <a class="button" href="game/index.html">Jouer au jeu</a>
+    </section>
 </body>
 </html>
