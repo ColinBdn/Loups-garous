@@ -6,39 +6,62 @@
     <title>Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
-    <script src="script.js"></script>
+    <script src="./socket.io.js"></script>
 </head>
 
 <body style="margin: 0; padding: 0;">
+
     <section id="connectForm">
         <div>
         <input type="text" id="playerName" placeholder="entrez votre nom/pseudo" autocomplete="off">
-        <button type="button" onclick="connect()">submit</button>
+        <button id="connectButton" type="button" onclick="connect()">submit</button>
         </div>
-        <p>number of connected player: <span id="nbPlayer">0</span>/3</p>
+        <p>number of connected player: <span id="nbPlayer">0</span></p>
     </section>
-    <p id="gameMessages">
-    </p>
-    <section id="gameSection">
-        <div class="player" id="player1">
 
-        </div>
-        <div class="player" id="player2">
+    
+    <section id="mainSection">
 
+        <div id="infoSection">
+            <div id="infoSectionCenter">
+                <h1>Ton rôle:</h1>
+                <div>
+                    <div style="display: flex; flex-direction: column; text-align: center;">
+                        <img id="ownRole">
+                        <p id="ownRoleText"></p>
+                    </div>
+                </div>
+                <div id="privateMessage">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="player" id="player3">
+        
+        <div id="gameSection">
+            <div id="gameMessagesDiv">
+                <p id="gameMessages"></p>
+            </div>
+        </div>
 
-        </div>
-        <div class="player" id="player4">
 
+        <div id="chatSection">
+            <div id="chat">
+                <div id="messageListBorder">
+                    <div id="messagesList">
+                    </div>
+                </div>
+                <div id="chatInput">
+                    <input id="message" type="text" placeholder="Ecrivez votre message..." />
+                    <button id="send">Envoyer</button>
+                </div>
+            </div>
         </div>
-        <div class="player" id="player5">
 
-        </div>
-        <div class="player" id="player6">
-
-        </div>
     </section>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -6,25 +6,31 @@ html, body
 
     background: url('./images/mainBackground.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Creepster', cursive; /* Import Creepster font for horror theme */
-    color: #ff0000; /* Blood red color for text */
+    font-family: 'Creepster', cursive;
+    color: #ffcccc;
+    letter-spacing: 1px;
 }
 
-/* Centering the form */
+
+
+
+/*-------------------------------------------------------------*/
+/*---------------------- CONNECT FORM -------------------------*/
+/*-------------------------------------------------------------*/
+
 #connectForm {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border: 2px solid #800000; /* Dark red border */
+    border: 2px solid #800000;
     border-radius: 10px;
     box-shadow: 0 0 20px #ff0000;
 }
 
-/* Styling the input */
 #playerName {
     width: 80%;
     padding: 15px;
@@ -38,7 +44,6 @@ html, body
     margin-bottom: 15px;
 }
 
-/* Styling the button */
 button {
     padding: 15px 30px;
     font-size: 20px;
@@ -58,45 +63,207 @@ button:hover {
 }
 
 /* Text styling */
-p {
+#connectForm p {
     font-size: 18px;
     margin-top: 15px;
-    color: #ffcccc; /* Lighter red for better readability */
+    color: #ffcccc; 
 }
 
-span {
-    font-weight: bold;
+
+
+
+
+
+/*-------------------------------------------------------------*/
+/*---------------------- MAIN SECTION -------------------------*/
+/*-------------------------------------------------------------*/
+
+#mainSection
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
 }
+
+
+
+
+/*---------------------- GAME SECTION -------------------------*/
 
 #gameSection
 {
-display: block; /* Removes scrollbars caused by inline elements */
-border:0px solid #0033ff;
-margin: 0px;
-padding: 0px;
-height: 100vh;
-width: 100vw;
+    position: relative;
+    border:0px solid #0033ff;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
 }
 
 
-#gameMessages {
+#gameMessagesDiv
+{
+    display: table;
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     background: rgba(0, 0, 0, 0.159); /* Dark semi-transparent background */
     padding: 10px;
     margin: 0;
     border: 2px solid #800000; /* Dark red border */
     border-radius: 10px;
+    width: 40%;
+    height: 10%;
+    
+}
+
+#gameMessages
+{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#validateButton
+{
+    position: absolute;
+    top: 75vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.username {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffcccc; 
+}
+.additionalInfo p {
+    font-size: 14px;
+    margin: 2px;
+    color: #ffcccc; 
 }
 
 
-.player
+
+
+/*---------------------- INFO SECTION -------------------------*/
+
+#infoSection
 {
-    width: 5vh;
-    height: 8vh;
-    background-color: red;
+    width: 25%;
+    border-right: 5px solid white;
+    position: relative;
+}
+
+
+#infoSectionCenter
+{
     position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ownRole
+{
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#infoSection h1
+{
+    font-size: 2vw;
+    text-align: center;
+}
+#infoSection #privateMessage
+{
+    border: 2px solid #800000;
+    text-align: center;
+    border-radius: 10px;
+
+    min-height: 25vh;
+    margin: 10%;
+    padding: 5%;
+}
+
+
+
+/*---------------------- CHAT SECTION -------------------------*/
+
+#chatSection
+{
+    width: 25%;
+    border-left: 5px solid white;
+    position: relative;
+}
+
+#chat
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    padding: 2%;
+}
+
+#chatInput
+{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 2px solid #800000;
+    border-radius: 10px;
+    height: 5%;
+    width: 90%;
+    padding: 2%;
+    display: flex;
+}
+
+#send
+{
+    padding: 0px 20px;
+    margin: 1%;
+}
+
+#message
+{
+    width: 100%;
+    margin: 1%;
+}
+
+#messageListBorder
+{
+    outline: 2px solid #800000;
+    border-radius: 10px;
+    height:88%;
+    padding: 4%;
+}
+
+#messagesList
+{
+    overflow-y: auto;
+    height:100%;
+}
+
+#messagesList div
+{
+    text-align: left;
+}
+
+#messagesList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#messagesList::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+#messagesList::-webkit-scrollbar-track {
+    background: transparent;
 }
