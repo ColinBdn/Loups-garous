@@ -1,1 +1,1 @@
-Petit projet web en duo de cours ou j'ai reproduit "Les Loups-garous de Thiercelieux".
+Petit projet web en duo de cours ou on a reproduit "Les Loups-garous de Thiercelieux".
